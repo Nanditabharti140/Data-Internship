@@ -1,0 +1,33 @@
+# Import required libraries
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Create a sample dataset
+data = {
+    "Age_Group": ["0-20", "21-44", "45+"],
+    "Population_in_Millions": [512, 607, 196]
+}
+
+# Convert dictionary to DataFrame
+df = pd.DataFrame(data)
+
+# Display the dataset
+print("Sample Dataset:")
+print(df)
+
+# Set figure size
+plt.figure(figsize=(8, 5))
+
+# Create bar chart
+plt.bar(df["Age_Group"], df["Population_in_Millions"])
+
+# Add labels and title
+plt.xlabel("Age Groups")
+plt.ylabel("Population (Millions)")
+plt.title("Population Distribution by Age Group (Sample Dataset)")
+
+# Add grid
+plt.grid(axis='y', linestyle='--', linewidth=0.5)
+
+# Show the plot
+plt.show()
